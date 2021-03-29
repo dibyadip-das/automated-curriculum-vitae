@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex
+% Author : Dibyadip Das
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\sffamily
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{ 
+    \textbf{ #1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue
+}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  {\href{https://about.me/dibyadip}{\LARGE \textbf{\textcolor{Periwinkle}{Dibyadip Das}}}} & Email : \href{mailto:dibyadip.das@gmail.com}{dibyadip.das@gmail.com}\\
+  \href{https://www.linkedin.com/in/dibyadip}{\includegraphics[trim=2cm 6cm 0 0, width=0.3in]{icons/linkedin-icon.png}\textcolor{blue}{linkedin.com/dibyadip}} & Mobile +91 (897) 595-6874 \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Varian Medical Systems}{Pune, India}
+      {Data Scientist}{Nov 2019 - Present}
+      \resumeItemListStart
+        \resumeItem{Data and Analytics}
+          {Use various unsupervised learning techniques to extract and catalog metadata from various data sources such as: Electronic Medical Record(s) (\textbf{EMR}), \textbf{DICOM} medical images, HL7, FHIR data, etc.. Run statistical analysis to benchmark and score various data sets.}
+        \resumeItem{Tensorflow}
+          {Used Recurrent Neural Network (RNN) with Keras and Tensorflow to search for patients using natural English language. Created an unique model using different accepted medical codes like CPT, LOINC, RxNorm and SNOMED that made the it robust with an extremely powerful search engine. }
+        \resumeItem{Natural Language Processing}
+          {In the world of Healthcare, we come across lots of unstructured data i.e. like Patient Notes, Documents, etc. Used python’s \textbf{NLTK toolkit}, \textbf{BIO-BERT, ELMO, FastText} to create a solution that converts these unstructured data into JSON objects.Used \textbf{Alexa Skill Kit} and Azure Cognitive Services - \textbf{LUIS} to build healthcare bot engines.}
+        \resumeItem{Cloud ML Platforms}
+          {Worked on multiple cloud platforms like \textbf{AWS: Sagemaker, Lambda, Comprehend, Azure: ML Studio, Notebooks, Functions, GCP: Collab} to take advantage of the cloud compute. Also, contributed to \textbf{MLOps} in the process of Model Hosting and Model Serving using \textbf{Kubeflow and Kubernetes}}
+      \resumeItemListEnd
+    \resumeSubSubheading
+     {Software Engineer}{Aug 2014 - Nov 2019}
+      \resumeItemListStart
+        \resumeItem{.NET}
+          {Responsible for developing and maintaining Oncological based \textbf{Medical Practice Management Software (PMS)} C\# with WinForms and WFP in the frontend and maintain complex workflows using \textbf{reflection, multi-threading, managed and un-managed code}. Also maintain Clinical Quality Measure tool as per the guidelines provided by CMS and HL7.}
+        \resumeItem{TFS and MS Build}
+          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+        \resumeItem{MS SQL Server}
+          {All our data is store in SQL Server (On Premise and as well as Azure SQL Instance). Extensively worked on Query performance and making query plans}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Webtech Developers Pvt Ltd}{Pune, India}
+      {Associate Developer}{Jan 2013 - Aug 2014}
+      \resumeItemListStart
+        \resumeItem{Clean Code}
+          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
+        \resumeItem{Multi-Threading and Memory Management}
+          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
+        \resumeItem{Image Recognition using C\#}
+          {Worked on grabbing HTTP, JPEG, RTSP, and MJPEG frames from IP Cameras using rest API. Used FFMPEG recorder to covert streams into mp4 videos. Also used OpenCV.NET for license place recognition.}
+        \resumeItem{Dev Environment}
+          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------------
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Microsoft Technology Professiona (MTP)}
+      {Credential Id – E364-0466}
+    \resumeSubItem{Microsoft Technology Associate (MTA)}
+      {Credential Id – E364-0465}
+    \resumeSubItem{Coursera Neural Networks and Deep Learning}
+      {Credential Id - P5EF9K9PT87D}
+  \resumeSubHeadingListEnd
+  
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Pune}{Pune, India}
+      {M.Sc. in Computer Science;  Overall Score: 73.93\%}{Aug. 2011 -- June. 2013}
+    \resumeSubheading
+      {National Institute of Electronics and Information Technology}{Kolkata, India}
+      {A-Level;  Overall Score: 69\% }{Jul. 2010 -- Jan. 2013}
+    \resumeSubheading
+      {University of Calcutta}{Kolkata, India}
+      {B.Sc. (Honours) in Computer Science}{Aug. 2007 -- Nov. 2010}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Healthcare Data Governance}
+      {Responsible for managing and securing sharing over 30 TB of Electronic Medical Records and Medical Imaging data on Azure Cloud.}
+    \resumeSubItem{ARIA Oncology Information System}
+      {It is an one information system for radiation, medical, and surgical oncology with comprehensive patient information management, seamless connectivity, integrated imaging and assisted regulatory compliance.}
+    \resumeSubItem{ARIA OIS for Medical Oncology}
+      {Medical Oncoloty Software with personalized care pathways and manage chemotherapy and other orders with embedded and automated decision support. It can construct and automatically apply treatment modifications based on your specifications to help you manage complex patient scenarios.}
+    \resumeSubItem{FTP Manager Lite}
+      {FTP Manager Lite provides you a fast and secure way to transfer and share your files.  This free FTP client will allow you to move data from your PC to FTP or between PC's and servers.  Your data is secure with support for FTPS (FTP over SSL), automatic network reconnection, automatic transfer resume, efficient use of multiple connections, and more.}
+    \resumeSubItem{IP Camera Viewer}
+      {IP Camera Viewer allows you to view live video from your USB or IP cameras on your PC.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+%\section{Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Domain Skills}{: C#, Python, Java, C++, SQL, JavaScript}
+%    }
+%    \item{
+%      \textbf{Programming Languages}{: C#, Python, Java, C++, SQL, JavaScript}
+%    }
+%    \item{
+%      \textbf{Tools & Technologies}{: AWS, Play, React}
+%    }
+%  \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
